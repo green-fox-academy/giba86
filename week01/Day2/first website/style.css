@@ -1,0 +1,59 @@
+html {
+    padding: 0 10% 10% 10%;
+    
+}
+a {
+    color: whitesmoke;
+}
+menu, ul{
+    list-style-type: none;
+    overflow: hidden;
+    margin-right: 150;
+    font-size: 20px;
+    background-color: #333333;
+}
+img {
+    padding: 20px 0px;
+    margin: 20px;
+}
+li {
+    float: right;
+    padding: 20px;
+}
+
+body {
+    background-image: url("topography.png");
+    background-repeat: repeat;
+}
+header, h1 {
+    letter-spacing: 5px;
+    font-size: 60px;
+    font-family: 'Inconsolata', monospace;
+    
+    
+}
+
+h2 {
+    font-size: 40px;
+}
+h3 {
+    font-size: 40px;
+    text-align: center;
+}
+h4 {
+    font-size: 30px;
+}
+.separator {
+    font-size: 50px;
+    font-family: 'Arial Narrow Bold';
+    text-align: center; 
+}
+.dontknow {
+    font-size: 22px;
+    
+}
+
+.wikip {
+    font-size: 20px;
+
+}
