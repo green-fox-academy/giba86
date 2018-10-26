@@ -1,0 +1,4 @@
+in this file I give you a hint what you can find in dir5.txt
+
+ls -alt
+

@@ -1,0 +1,8 @@
+total 0
+drwxr-xr-x 1 Gab 197121 0 Oct 26 16:46 dir5/
+drwxr-xr-x 1 Gab 197121 0 Oct 26 16:45 dir4/
+drwxr-xr-x 1 Gab 197121 0 Oct 26 16:42 dir3/
+drwxr-xr-x 1 Gab 197121 0 Oct 26 16:40 dir2/
+drwxr-xr-x 1 Gab 197121 0 Oct 26 16:38 ./
+drwxr-xr-x 1 Gab 197121 0 Oct 26 16:38 dir1/
+drwxr-xr-x 1 Gab 197121 0 Oct 26 16:37 ../

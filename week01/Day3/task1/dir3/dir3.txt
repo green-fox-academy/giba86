@@ -1,0 +1,9 @@
+this is just a practice for vi
+
+if you read this you should know that you can save and exit with the following commands
+
+press "esc"
+
+type ":w"
+type ":q"
+

@@ -1,0 +1,6 @@
+dir1/
+dir1.txt
+dir2/
+dir3/
+dir4/
+dir5/
