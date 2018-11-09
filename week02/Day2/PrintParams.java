@@ -8,8 +8,10 @@ public class PrintParams {
     }
     public static void PrintParams(String[] input, int nums){
         for (int i = 0; i < nums; i++) {
+            for (int j = 0; j < i; j++) {
+                System.out.print(input[j]+ " ");
+            }
             System.out.println(input[i]);
-
         }
     }
 }
