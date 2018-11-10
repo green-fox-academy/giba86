@@ -13,13 +13,32 @@ public class SubInt {
         //  should print: '[]'
     }
     public static ArrayList<Integer> subInt(int x, int[] task){
+        ArrayList<Integer> answerReverse = new ArrayList<>();
         ArrayList<Integer> answer = new ArrayList<>();
+        int temp;
+
         for (int i = 0; i < task.length; i++) {
-            if(x == task[i] || task[i] % 10 == x || task[i] % 100 == (x * 10)){
-                answer.add(i);
+            temp = task[i];
+            while(temp > 0){
+                if(temp % 10 == x){
+                    answer.add(i);
+                    break;
+                }else {
+                    temp = temp / 10;
+                }
             }
         }
-        // System.out.println("this function works on numbers below 100");
+        for (int i = 0; i < answerReverse.size(); i++) {
+            answer.add(answerReverse.get(answerReverse.size() - 1 - i));
+        }
         return answer;
     }
 }
+
+//        for (int i = 0; i < task.length; i++) {
+//            if(x == task[i] || task[i] % 10 == x || task[i] % 100 == (x * 10)){
+//                answer.add(i);
+//            }
+//        }
+//        //System.out.println("this function works on numbers below 100");
+//        return answer;
