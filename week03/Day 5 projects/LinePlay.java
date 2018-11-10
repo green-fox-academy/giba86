@@ -7,32 +7,50 @@ import static javax.swing.JFrame.EXIT_ON_CLOSE;
 public class LinePlay {
     public static void mainDraw(Graphics graphics) {
 
-        int gap = WIDTH / 16;
-        int x1g = 0;
-        int y1g = 2 * gap;
-        int x2g = gap;
-        int y2g = HEIGHT;
-        graphics.setColor(Color.green);
-        for (int i = 0; i < 14; i++) {
-            graphics.drawLine(x1g, y1g, x2g, y2g);
-            x2g += gap;
-            y1g += gap;
+        int scennerke = 20; // resolution value
+        int lines = 10; // if scennerke <=10, lines <= 16
+        int canvasG = HEIGHT / scennerke;
+        int gap = canvasG / lines;
+
+        int[][] greenCoordinates = {{0, 0}, {gap, canvasG}};
+        int[][] magentaCoordinates = {{0, 0}, {canvasG, gap}};
+
+        for (int rows = 0; rows < scennerke; rows++) {
+            for (int cols = 0; cols < scennerke; cols++) {
+                greenAndMagnetaLines(graphics, greenCoordinates, magentaCoordinates, lines, gap);
+
+                greenCoordinates[1][1] += canvasG;
+                greenCoordinates[1][0] -= canvasG;
+                magentaCoordinates [0][0] -= canvasG;
+                magentaCoordinates [0][1] += canvasG;
+            }
+            greenCoordinates[0][0] += canvasG;
+            greenCoordinates[0][1] = 0;
+            greenCoordinates[1][0] += canvasG;
+            greenCoordinates[1][1] = canvasG;
+            magentaCoordinates[0][0] += canvasG;
+            magentaCoordinates[0][1] = 0;
+            magentaCoordinates[1][0] += canvasG;
+            magentaCoordinates[1][1] = gap;
         }
-        int x1m = 2 *gap;
-        int y1m = 0;
-        int x2m = WIDTH;
-        int y2m = gap;
-        graphics.setColor(Color.magenta);
-        for (int i = 0; i < 14; i++) {
-            graphics.drawLine(x1m, y1m, x2m, y2m);
-            x1m += gap;
-            y2m += gap;
+    }
+    public static void greenAndMagnetaLines(Graphics graphics, int[][] green, int[][] magenta, int size, int gaps){
+        for (int i = 0; i < size; i++) {
+            graphics.setColor(Color.green);
+            graphics.drawLine(green[0][0], green[0][1], green[1][0], green[1][1]);
+            green[0][1] += gaps;
+            green[1][0] += gaps;
+
+            graphics.setColor(Color.magenta);
+            graphics.drawLine(magenta[0][0], magenta[0][1], magenta[1][0], magenta[1][1]);
+            magenta[0][0] += gaps;
+            magenta[1][1] += gaps;
         }
     }
 
     // Don't touch the code below
-    static int WIDTH = 320;
-    static int HEIGHT = 320;
+    static int WIDTH = 800;
+    static int HEIGHT = 800;
 
     public static void main(String[] args) {
         JFrame jFrame = new JFrame("Drawing");
