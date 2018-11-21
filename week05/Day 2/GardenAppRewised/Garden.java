@@ -16,11 +16,11 @@ class Garden {
 
   void wateringAll(int waterAmount) {
     double waterForEach = waterAmount / megaGarden.size();
-    for (int i = 0; i < megaGarden.size(); i++) {
-      if (megaGarden.get(i).getWaterLevel() < megaGarden.get(i).getNeedWatering()) {
-          megaGarden.get(i).watering(waterForEach);
+    for (Plants plants : megaGarden) {
+      if (plants.getWaterLevel() < plants.getNeedWatering()) {
+        plants.watering(waterForEach);
       }
-      megaGarden.get(i).status();
+      plants.status();
     }
   }
 }
