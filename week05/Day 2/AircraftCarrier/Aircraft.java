@@ -15,10 +15,12 @@ public class Aircraft {
     this.baseDamage = baseDamage;
   }
 
-  public void fight() {
+  public void fight(Carrier carrier) {
     damage = ammoLevel * baseDamage;
     ammoLevel = 0;
+    carrier.carrierHP -= damage;
   }
+
 
   public void refill(int refill) {
     if (refill >= maxAmmo) {
