@@ -1,0 +1,39 @@
+Exercise 2 - ToDo Api
+
+How many tables are needed?
+
+1 table is enough with the following columns:
+ID, NAME, DESCRIPTION, STATUS, DATE of added, DATE of deadline
+
+Which data do we need to store?
+
+ID = unique number of the task
+NAME = name of the task
+DESCRIPTION = short description what to do
+STATUS = actual state of the task / process
+DATE = when it added and when it has to be done
+
+What will be the data type?
+
+ID = int / number (or AtomicLong)
+NAME = string / text
+DESCRIPTION = string / text
+STATUS = text or number (if numbers describe the actual status)
+DATE_of_added = DATE
+DATE_of_deadline = DATE
+
+create database Exercise2;
+use Exercise2;
+create table ToDo(
+    ID INT UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    NAME TEXT NULL;
+    DESCRIPTION TEXT NULL;
+    STATUS ENUM('Pending', 'UnderProgress', 'Done') DEFAULT 'Pending'
+    DATE_of_added DATE
+    DATE_of_deadline DATE
+);
+
+
+
+
+
