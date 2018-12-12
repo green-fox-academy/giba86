@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaft.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>My Shop</title>
+</head>
+<form action = "/webshop" method = "post">
+    <h1>My Shop</h1>
+    <div class = "navigationButtons">
+        <input type = "button" value = "Only available" onclick = "window.location.href = '/webshop/onlyavailable'"></input>
+        <input type = "button" value = "Cheapest First" onclick = "window.location.href = '/webshop/cheapestfirst'"></input>
+        <input type = "button" value = "Contains Nike" onclick = "window.location.href = '/webshop/containsnike'"></input>
+        <input type = "button" value = "Average Stock" onclick = "window.location.href = '/webshop/averagestock'"></input>
+        <input type = "button" value = "Most Expensive Available" onclick = "window.location.href = '/webshop/mostexpensive'"></input>
+    </div>
+    <div class = "navigationButtons">
+        <input type="text" placeholder="Search here giza">
+        <button type = "submit" >Search</button>
+    </div>
+</form>
+<body>
+    <h2 th:text = "${average}"></h2>
+
+</body>
+</html>
