@@ -6,9 +6,27 @@
 </head>
 <h1>Todos for today:</h1>
 <body>
-<ul th:each="ToDo : ${todos}" th:object = "${ToDo}">
-    <li th:text="|*{idOrAnything} *{title} *{urgent} *{done}|"></li>
-</ul>
-
+<a href="/addtodo">Add new task</a>
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Title</th>
+        <th>Urgent</th>
+        <th>Done</th>
+        <th>Delete</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="ToDo : ${todos}" th:object = "${ToDo}">
+        <td th:text="*{id}"></td>
+        <td th:text="*{title}"></td>
+        <td th:text="*{urgent}"></td>
+        <td th:text="*{done}"></td>
+        <td><form th:action="@{'/'+*{id} + '/delete'}" method="post"><input type="submit" value="delete"></form></td>
+        <td><form th:action="@{'/'+*{id} + '/edit'}" method="get"><input type="submit" value="edit"></form></td>
+    </tr>
+    </tbody>
+</table>
 </body>
 </html>

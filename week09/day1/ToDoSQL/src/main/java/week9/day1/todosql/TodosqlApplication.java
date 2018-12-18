@@ -19,11 +19,10 @@ public class ToDoSqlApplication implements CommandLineRunner {
 
   @Override
   public void run(String... args) throws Exception {
-    toDoRepository.save(new ToDo("test1", false, false));
-    toDoRepository.save(new ToDo("test2", false, false));
-    toDoRepository.save(new ToDo("test3", false, false));
-    toDoRepository.save(new ToDo("test4", false, false));
-
+//    toDoRepository.save(new ToDo("test1", false, false));
+//    toDoRepository.save(new ToDo("test2", false, false));
+//    toDoRepository.save(new ToDo("test3", false, false));
+//    toDoRepository.save(new ToDo("test4", false, false));
   }
 }
 

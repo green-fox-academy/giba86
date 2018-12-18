@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaft.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Task</title>
+</head>
+<body>
+<form th:action="@{edit}" th:object="${editTask}" th:method="post">
+    <div>
+        <label for="title">Add task</label>
+        <input type="text" id="title" name="title" th:field="*{title}" required>
+        <input type="checkbox" th:field="*{urgent}">
+        <input type="checkbox" th:field="*{done}">
+        <button type="submit" name="submit" value="new todo"></button>
+    </div>
+</form>
+</body>
+</html>

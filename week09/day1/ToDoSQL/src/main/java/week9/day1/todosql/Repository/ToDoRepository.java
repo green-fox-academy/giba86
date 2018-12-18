@@ -7,4 +7,5 @@ import java.util.List;
 
 public interface ToDoRepository extends CrudRepository<ToDo, Long> {
   List<ToDo> findByDone(Boolean bool);
+
 }

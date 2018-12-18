@@ -6,7 +6,7 @@ public class ToDo {
 
   @Id
   @GeneratedValue(strategy = GenerationType.AUTO)
-  private Long idOrAnything;
+  private Long id;
   private String title;
 
   private Boolean urgent;
@@ -29,6 +29,12 @@ public class ToDo {
     this.done = done;
   }
 
+
+
+  public Long getId() {
+    return id;
+  }
+
   public String getTitle() {
     return title;
   }
@@ -39,6 +45,10 @@ public class ToDo {
 
   public Boolean getDone() {
     return done;
+  }
+
+  public void setId(Long id) {
+    this.id = id;
   }
 
   public void setTitle(String title) {
@@ -53,7 +63,13 @@ public class ToDo {
     this.done = done;
   }
 
-  public Long getIdOrAnything() {
-    return idOrAnything;
+  @Override
+  public String toString() {
+    return "ToDo{" +
+            "id=" + id +
+            ", title='" + title + '\'' +
+            ", urgent=" + urgent +
+            ", done=" + done +
+            '}';
   }
 }
